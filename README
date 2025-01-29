@@ -1,0 +1,112 @@
+# VM Intelligence Merger 🔄🔍  
+**Version 0.003** | Developed by David Maiolo  
+
+![GUI Screenshot](vm_intelligence_merger_003_screenshot.png) *(Add actual screenshot after uploading)*  
+
+## Key Features
+- User-friendly graphical interface  
+- Multi-source data integration (CSV + XLSX)  
+- Intelligent application recognition hierarchy  
+- Robust column validation with auto-suggestions  
+- Pandas-based data processing  
+- Single-click export functionality  
+- Integrated help system and documentation  
+
+## Installation 💻  
+### Requirements  
+- Python 3.8+  
+- pip package manager  
+
+### Dependencies  
+```
+pip install pandas openpyxl
+```
+## Usage
+
+### Launch Application
+
+```
+python vm_intelligence_merger.py
+```
+
+### File Selection Workflow
+
+- Click "1. Select Iteration 0 (CSV)" - Choose raw VM properties export
+- Click "2. Select Iteration 1 (XLSX)" - Select post-processed analysis file
+- Click "3. Process and Export" when both files are loaded
+
+## Output
+
+- Generates new XLSX file with _crossreferenced suffix
+- Preserves original data while adding enhanced application intelligence
+- Flags uncertain entries with "UNKNOWN - Needs Manual Review"
+
+## File Requirements 📁
+### Iteration 0 (CSV)
+Column Name	Description	Example
+- Name	VM hostname	s1dvwb01pm
+- Notes	Application references	SAMPLE 00 Dev 01 00
+- OS Version	Operating system details	Windows Server 2022
+- DNS Name	Fully qualified domain name	server.sample.external
+
+### Iteration 1 (XLSX)
+Column Name	Description	Example
+- Host	Full VM identifier	sampleserver:vm-12345
+- Discovered App	Virtana's initial analysis	WSUS/SCCM_Recognized
+- Feature Ports	Network port list	8530, 445
+
+## Intelligence Hierarchy 🧠
+- Direct Notes Analysis (with RITM# removal)
+- Recognized Applications (from Virtana analysis)
+- Port Signature Mapping (20+ common services)
+- OS Pattern Matching (Virtualization platforms)
+- DNS Name Keywords (Web/SQL indicators)
+- Manual Review Flag (Final fallback)
+
+## Troubleshooting 🔧
+### Common Issues
+Column Name Mismatches
+
+```
+Error: "XLSX missing 'Feature Ports' column. Similar columns found: FeaturePorts"
+```
+➡️ Solution: Rename column to exact match or update code constants
+
+Missing Required Data
+
+```
+Error: "CSV missing required columns: OS Version"
+```
+
+➡️ Solution: Ensure source files contain all required columns
+
+Encoding Issues
+
+```
+UnicodeDecodeError: 'utf-8' codec can't decode byte...
+```
+
+➡️ Solution: Save source files as UTF-8 encoded
+
+## Technical Details ⚙️
+- Frontend: Tkinter GUI Framework
+- Data Processing: Pandas/Numpy
+- Excel Handling: Openpyxl engine
+- Validation: Strict column checking with normalization
+- Cross-Platform: Windows/macOS/Linux compatible
+
+## Version History 📜
+
+- 0.003	Enhanced validation, help system, port/OS mapping
+- 0.002	Added progress visualization, about dialog
+- 0.001	Initial release with basic functionality
+
+## License 📄
+MIT License - See LICENSE file
+
+##  Disclaimer ⚠️
+This tool provides application intelligence suggestions based on available data. Always verify critical entries manually. Not responsible for CMDB import errors or misconfigurations.
+
+- Contact: David Maiolo
+- Email: david.maiolo@alumni.harvard.edu
+- GitHub: github.com/dmaiolo
